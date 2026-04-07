@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SweetBite Patisserie - Ice Creams</title>
+  <link rel="stylesheet" href="icecream.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">SweetBite </div>
+
+  <nav class="nav">
+    <a href="Home.html">Home</a>
+    <a href="Menu.html">Menu</a>
+    <a href="Cake.html">Cakes</a>
+    <a href="order.html">Order</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search ice creams..." />
+    <button onclick="performSearch()">🔍</button>
+  </div>
+</header>
+
+<main class="icecream-main">
+  <h1 class="page-title">Our Delicious Ice Creams</h1>
+
+  <div class="icecream-grid">
+
+    <!-- 1 -->
+    <div class="icecream-card">
+      <img src="icecream/vanilla.jpg" alt="Vanilla Ice Cream">
+      <h3>Vanilla Ice Cream</h3>
+      <p>$2.50</p>
+      <button class="order-btn" onclick="addToCart('Vanilla Ice Cream', 2.5, 'icecream/vanilla.jpg')">Order Now</button>
+    </div>
+
+    <!-- 2 -->
+    <div class="icecream-card">
+      <img src="icecream/choclate.jpg" alt="Chocolate Ice Cream">
+      <h3>Chocolate Ice Cream</h3>
+      <p>$2.80</p>
+      <button class="order-btn" onclick="addToCart('Chocolate Ice Cream', 2.8, 'icecream/chocolate.jpg')">Order Now</button>
+    </div>
+
+    <!-- 3 -->
+    <div class="icecream-card">
+      <img src="icecream/stawberry.jpg" alt="Strawberry Ice Cream">
+      <h3>Strawberry Ice Cream</h3>
+      <p>$2.90</p>
+      <button class="order-btn" onclick="addToCart('Strawberry Ice Cream', 2.9, 'icecream/stawberry.jpg')">Order Now</button>
+    </div>
+
+    <!-- 4 -->
+    <div class="icecream-card">
+      <img src="icecream/mint.jpg" alt="Mint Ice Cream">
+      <h3>Mint Ice Cream</h3>
+      <p>$3.00</p>
+      <button class="order-btn" onclick="addToCart('Mint Ice Cream', 3.0, 'icecream/mint.jpg')">Order Now</button>
+    </div>
+
+    <!-- 5 -->
+    <div class="icecream-card">
+      <img src="icecream/cramell.jpg" alt="Caramel Ice Cream">
+      <h3>Caramel Ice Cream</h3>
+      <p>$3.10</p>
+      <button class="order-btn" onclick="addToCart('Caramel Ice Cream', 3.1, 'icecream/caramel.jpg')">Order Now</button>
+    </div>
+
+    <!-- 6 -->
+    <div class="icecream-card">
+      <img src="icecream/matcha .jpg" alt="Matcha Ice Cream">
+      <h3>Matcha Ice Cream</h3>
+      <p>$3.20</p>
+      <button class="order-btn" onclick="addToCart('Matcha Ice Cream', 3.2, 'icecream/matcha.jpg')">Order Now</button>
+    </div>
+
+  </div>
+</main>
+
+<script src="icecream.js"></script>
+</body>
+</html>

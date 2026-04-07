@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SweetBite Patisserie - Cupcakes</title>
+  <link rel="stylesheet" href="cupcake.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">SweetBite </div>
+
+  <nav class="nav">
+    <a href="Home.html">Home</a>
+    <a href="Menu.html">Menu</a>
+    <a href="Cake.html">Cakes</a>
+    <a href="order.html">Order</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search cakes, menu..." />
+    <button onclick="performSearch()">🔍</button>
+  </div>
+</header>
+
+<main class="cupcake-main">
+  <h1 class="page-title">Our Delicious Cupcakes</h1>
+
+  <div class="cupcake-grid">
+
+    <!-- 1 -->
+    <div class="cupcake-card">
+      <img src="cupcake/choclate.jpg" alt="Chocolate Cupcake">
+      <h3>Chocolate Cupcake</h3>
+      <p>$3.50</p>
+      <button class="order-btn" onclick="addToCart('Chocolate Cupcake', 3.5, 'cupcake/chocolate.jpg')">Order Now</button>
+    </div>
+
+    <!-- 2 -->
+    <div class="cupcake-card">
+      <img src="cupcake/vanilla.jpg" alt="Vanilla Cupcake">
+      <h3>Vanilla Cupcake</h3>
+      <p>$3.00</p>
+      <button class="order-btn" onclick="addToCart('Vanilla Cupcake', 3.0, 'cupcake/vanilla.jpg')">Order Now</button>
+    </div>
+
+    <!-- 3 -->
+    <div class="cupcake-card">
+      <img src="cupcake/redvelvet.jpg" alt="Red Velvet Cupcake">
+      <h3>Red Velvet Cupcake</h3>
+      <p>$3.80</p>
+      <button class="order-btn" onclick="addToCart('Red Velvet Cupcake', 3.8, 'cupcake/redvelvet.jpg')">Order Now</button>
+    </div>
+
+    <!-- 4 -->
+    <div class="cupcake-card">
+      <img src="cupcake/leamon.jpg" alt="Lemon Cupcake">
+      <h3>Lemon Cupcake</h3>
+      <p>$3.20</p>
+      <button class="order-btn" onclick="addToCart('Lemon Cupcake', 3.2, 'cupcake/lemon.jpg')">Order Now</button>
+    </div>
+
+    <!-- 5 -->
+    <div class="cupcake-card">
+      <img src="cupcake/careamel.jpg" alt="Caramel Cupcake">
+      <h3>Caramel Cupcake</h3>
+      <p>$3.60</p>
+      <button class="order-btn" onclick="addToCart('Caramel Cupcake', 3.6, 'cupcake/caramel.jpg')">Order Now</button>
+    </div>
+
+    <!-- 6 -->
+    <div class="cupcake-card">
+      <img src="cupcake/matcha.jpg" alt="Matcha Cupcake">
+      <h3>Matcha Cupcake</h3>
+      <p>$3.70</p>
+      <button class="order-btn" onclick="addToCart('Matcha Cupcake', 3.7, 'cupcake/matcha.jpg')">Order Now</button>
+    </div>
+
+  </div>
+</main>
+
+<script src="cupcake.js"></script>
+</body>
+</html>

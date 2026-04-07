@@ -1,0 +1,374 @@
+/* ==============================
+   Reset & Base Styles
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo 2', cursive;
+}
+
+body {
+  background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
+  color: #333;
+}
+
+/* ==============================
+   Header / Navigation
+============================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #ffc0cb;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0c0b0b;
+  font-family: "Playfair Display", serif;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.nav a {
+  text-decoration: none;
+  margin: 0 12px;
+  color: #6d4c4c;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav a:hover, .nav a.active {
+  color: #ff6f61;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 6px 14px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  gap: 8px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  width: 160px;
+  font-family: 'Baloo 2', cursive;
+  color: #472b2b;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #ff4da6;
+  transition: 0.2s;
+}
+
+.search-box button:hover {
+  transform: scale(1.2);
+}
+
+/* Cart Icon */
+.cart-icon {
+  margin-left: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon a {
+  text-decoration: none;
+  color: #ff4da6;
+  transition: 0.3s ease;
+}
+
+.cart-icon a:hover {
+  transform: scale(1.2);
+}
+
+/* ==============================
+   Main Layout
+============================== */
+.cart-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 120px 30px 50px 30px; /* top padding for fixed header */
+  justify-content: center;
+}
+
+/* ==============================
+   Cart Items Container
+============================== */
+.cart-items-container {
+  flex: 1 1 60%;
+  background: rgba(255, 245, 250, 0.95);
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.cart-items-container h2 {
+  margin-bottom: 25px;
+  color: #d94f8b;
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Cart Items List */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual Cart Card */
+.cake-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff0f5;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cake-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.cake-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cake-info img {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cake-info div h4 {
+  font-size: 1.4rem;
+  color: #c26a85;
+  margin-bottom: 5px;
+}
+
+.cake-info div p {
+  font-size: 1.1rem;
+  color: #6d4c4c;
+  font-weight: 500;
+}
+
+/* Quantity Buttons */
+.cake-quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cake-quantity button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: #ffb6c1;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cake-quantity button:hover {
+  background: #ff8fb1;
+}
+
+.cake-subtotal {
+  font-weight: 700;
+  min-width: 70px;
+  text-align: right;
+  color: #d94f8b;
+}
+
+/* Delete Button */
+.delete-btn {
+  padding: 6px 12px;
+  border: none;
+  background: #ff4f6e;
+  color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #d94049;
+}
+
+/* ==============================
+   Order Summary
+============================== */
+.order-summary {
+  flex: 1 1 320px;
+  background: #fff;
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.order-summary h2 {
+  color: #c26a85;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.order-summary .summary-details p,
+.order-summary .summary-details h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #6d4c4c;
+}
+
+.order-summary input {
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #ff6f61, #ff9a8b);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ff3b2f, #ff6f61);
+}
+
+.btn-clear {
+  background: #d94049;
+}
+
+.btn-clear:hover {
+  background: #b72e38;
+}
+
+.btn-checkout {
+  background: #6a1b9a;
+}
+
+.btn-checkout:hover {
+  background: #4e1470;
+}
+
+/* ==============================
+   Receipt Modal
+============================== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: #fff0f5;
+  border-radius: 25px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d94f8b;
+  font-size: 1.8rem;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* ==============================
+   Responsive
+============================== */
+@media (max-width: 768px) {
+  .cart-main {
+    flex-direction: column;
+    padding: 150px 20px 30px 20px;
+  }
+
+  .cake-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cake-info img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cake-subtotal {
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .order-summary {
+    width: 100%;
+  }
+
+  .nav {
+    display: none; /* hide nav on small screens, optional: add mobile menu later */
+  }
+}

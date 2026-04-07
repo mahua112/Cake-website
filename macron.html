@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SweetBite Patisserie - Macarons</title>
+  <link rel="stylesheet" href="macron.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">SweetBite 🍰</div>
+
+  <nav class="nav">
+    <a href="Home.html">Home</a>
+    <a href="Menu.html">Menu</a>
+    <a href="Cake.html">Cakes</a>
+    <a href="order.html">Order</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search cakes, menu..." />
+    <button onclick="performSearch()">🔍</button>
+  </div>
+</header>
+
+<main class="macaron-main">
+  <h1 class="page-title">Our Delicious Macarons</h1>
+
+  <div class="macaron-grid">
+
+    <div class="macaron-card">
+      <img src="macron-bilder/vanilla .jpg" alt="Vanilla Macaron">
+      <h3>Vanilla Macaron</h3>
+      <p>$2.50</p>
+      <button class="order-btn" onclick="addToCart('Vanilla Macaron', 2.5, 'macron-bilder/vanilla.jpg')">Order Now</button>
+    </div>
+
+    <div class="macaron-card">
+      <img src="macron-bilder/choclate .jpg" alt="Chocolate Macaron">
+      <h3>Chocolate Macaron</h3>
+      <p>$2.80</p>
+      <button class="order-btn" onclick="addToCart('Chocolate Macaron', 2.8, 'macron-bilder/chocolate.jpg')">Order Now</button>
+    </div>
+
+    <div class="macaron-card">
+      <img src="macron-bilder/strawberry.jpg" alt="Strawberry Macaron">
+      <h3>Strawberry Macaron</h3>
+      <p>$2.90</p>
+      <button class="order-btn" onclick="addToCart('Strawberry Macaron', 2.9, 'macron-bilder/strawberry.jpg')">Order Now</button>
+    </div>
+
+    <div class="macaron-card">
+      <img src="macron-bilder/rose.jpg" alt="Rose Macaron">
+      <h3>Rose Macaron</h3>
+      <p>$3.00</p>
+      <button class="order-btn" onclick="addToCart('Rose Macaron', 3.0, 'macron-bilder/rose.jpg')">Order Now</button>
+    </div>
+
+    <div class="macaron-card">
+      <img src="macron-bilder/coofe.jpg" alt="Coffee Macaron">
+      <h3>Coffee Macaron</h3>
+      <p>$3.10</p>
+      <button class="order-btn" onclick="addToCart('Coffee Macaron', 3.1, 'macron-bilder/coffee.jpg')">Order Now</button>
+    </div>
+
+    <div class="macaron-card">
+      <img src="macron-bilder/i.jpg" alt="Pistachio Macaron">
+      <h3>Pistachio Macaron</h3>
+      <p>$3.20</p>
+      <button class="order-btn" onclick="addToCart('Pistachio Macaron', 3.2, 'macron-bilder/i.jpg')">Order Now</button>
+    </div>
+
+    <div class="macaron-card">
+      <img src="macron-bilder/blueberry.jpg" alt="Blueberry Macaron">
+      <h3>Blueberry Macaron</h3>
+      <p>$3.00</p>
+      <button class="order-btn" onclick="addToCart('Blueberry Macaron', 3.0, 'macron-bilder/blueberry.jpg')">Order Now</button>
+    </div>
+
+    <div class="macaron-card">
+      <img src="macron-bilder/mango.jpg" alt="Mango Macaron">
+      <h3>Mango Macaron</h3>
+      <p>$2.90</p>
+      <button class="order-btn" onclick="addToCart('Mango Macaron', 2.9, 'macron-bilder/mango.jpg')">Order Now</button>
+    </div>
+
+    <div class="macaron-card">
+      <img src="macron-bilder/salted.jpg" alt="Salted Caramel Macaron">
+      <h3>Salted Caramel Macaron</h3>
+      <p>$3.40</p>
+      <button class="order-btn" onclick="addToCart('Salted Caramel Macaron', 3.4, 'macron-bilder/salted.jpg')">Order Now</button>
+    </div>
+
+    <div class="macaron-card">
+      <img src="macron-bilder/coucount.jpg" alt="Coconut Macaron">
+      <h3>Coconut Macaron</h3>
+      <p>$2.70</p>
+      <button class="order-btn" onclick="addToCart('Coconut Macaron', 2.7, 'macron-bilder/coconut.jpg')">Order Now</button>
+    </div>
+
+    <div class="macaron-card">
+      <img src="macron-bilder/leamon.jpg" alt="Lemon Macaron">
+      <h3>Lemon Macaron</h3>
+      <p>$2.80</p>
+      <button class="order-btn" onclick="addToCart('Lemon Macaron', 2.8, 'macron-bilder/lemon.jpg')">Order Now</button>
+    </div>
+
+    <div class="macaron-card">
+      <img src="macron-bilder/matcha.jpg" alt="Matcha Macaron">
+      <h3>Matcha Macaron</h3>
+      <p>$3.10</p>
+      <button class="order-btn" onclick="addToCart('Matcha Macaron', 3.1, 'macron-bilder/matcha.jpg')">Order Now</button>
+    </div>
+
+  </div>
+</main>
+
+<script src="macron.js"></script>
+</body>
+</html>

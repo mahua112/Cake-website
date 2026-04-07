@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SweetBite - Contact</title>
+  <link rel="stylesheet" href="contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">SweetBite</div>
+
+     <nav class="nav">
+    <a href="Home.html">Home</a>
+    <a href="Menu.html">Menu</a>
+    <a href="Cake.html">Cakes</a>
+    <a href="order.html">Order</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search cakes, menu..." />
+      <button onclick="performSearch()">🔍</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="contact-hero">
+    <h1>Contact SweetBite 🍰</h1>
+    <p>Reach us anytime & share your sweet feedback!</p>
+  </section>
+
+  <!-- Two Column Section -->
+  <section class="contact-columns">
+    <!-- Left: Contact + Rating -->
+    <div class="left-column">
+      <div class="contact-box">
+        <h2>Send a Message & Rate Us</h2>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+
+          <div class="rating">
+            <span class="star" data-value="1">☆</span>
+            <span class="star" data-value="2">☆</span>
+            <span class="star" data-value="3">☆</span>
+            <span class="star" data-value="4">☆</span>
+            <span class="star" data-value="5">☆</span>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Right: Info Cards -->
+    <div class="right-column">
+      <div class="info-card">
+        <h3>📍 Address</h3>
+        <p>123 Pink Lane, Sweet City</p>
+      </div>
+      <div class="info-card">
+        <h3>📞 Phone</h3>
+        <p>+123 456 7890</p>
+      </div>
+      <div class="info-card">
+        <h3>🌐 Website</h3>
+        <p>www.sweetbite.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+<section class="map-section">
+  <div class="map-box">
+    <img src="Bilder/map.png" alt="SweetBite Location Map">
+  </div>
+</section>
+
+
+  <!-- Quiz Section -->
+  <section class="quiz-section">
+    <h2>🍰 Cake Quiz - Win a Sweet Gift!</h2>
+    <p>What ingredient makes a chocolate cake rich and moist?</p>
+    <div class="quiz-options">
+      <button class="quiz-btn" data-answer="wrong">Flour</button>
+      <button class="quiz-btn" data-answer="wrong">Sugar</button>
+      <button class="quiz-btn" data-answer="correct">Cocoa</button>
+      <button class="quiz-btn" data-answer="wrong">Butter</button>
+    </div>
+    <p id="quiz-feedback"></p>
+  </section>
+
+  <script src="contact.js"></script>
+</body>
+</html>

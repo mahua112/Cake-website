@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SweetBite Bakery - Your Cart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+  <div class="logo">SweetBite</div>
+
+  <nav class="nav">
+    <a href="Home.html">Home</a>
+    <a href="Menu.html">Menu</a>
+    <a href="Cake.html">Cakes</a>
+    <a href="order.html">Order</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Search -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search cakes, menu..." />
+    <button onclick="performSearch()">🔍</button>
+  </div>
+  </div>
+</header>
+
+  <main class="cart-main">
+   <!-- Cart Items -->
+<section class="cart-items-container">
+  <h2>Your Cart 🛒</h2>
+  <div id="cart-items" class="cart-items"></div>
+</section>
+
+    <!-- Order Summary -->
+    <aside class="order-summary">
+      <h2>Order Summary</h2>
+      <div class="summary-details">
+        <p>Items: <span id="total-items">0</span></p>
+        <p>Subtotal: $<span id="sub-total">0.00</span></p>
+        <p>Shipping: $<span id="shipping">0.00</span></p>
+        <p>Taxes (5%): $<span id="taxes">0.00</span></p>
+        <p>Discount: $<span id="discount">0.00</span></p>
+        <hr>
+        <h3>Total: $<span id="total">0.00</span></h3>
+      </div>
+      <input type="text" id="coupon" placeholder="Enter coupon code">
+      <button id="applyCoupon" class="btn">Apply Coupon</button>
+      <button id="clearCart" class="btn btn-clear">Clear Cart</button>
+      <button id="checkout" class="btn btn-checkout">Checkout</button>
+    </aside>
+  </main>
+
+  <!-- Receipt Modal -->
+  <div id="receiptModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Receipt 🧾</h2>
+      <div id="receipt-details"></div>
+    </div>
+  </div>
+
+  <script src="order.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', cursive;
+    background-color: #ffc0cb; /* Baby Pink fallback */
+    background-image: url('Bilder/menu\ -background\ 2.jpg'); /* Make sure path & spelling is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* stays in place while scrolling */
+    color: #000; 
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* Overlay for better text visibility */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4); /* semi-transparent overlay */
+    z-index: -1;
+}
+
+/* Navigation Header */
+.header {
+    width: 100%;
+    padding: 15px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #f0d6cf;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  gap: 8px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  width: 150px;
+  font-family: 'Baloo 2', cursive;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.search-box button:hover {
+  transform: scale(1.2);
+}
+
+
+.nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #6d4c4c;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #c26a85;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    background: #c26a85;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: #a1526e;
+}
+
+/* Page Title Section */
+.page-title {
+    text-align: center;
+    margin-top: 120px; /* Space for fixed header */
+    margin-bottom: 30px;
+}
+
+.page-title h1 {
+    font-size: 2.5rem;
+    color: #000;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Menu Section */
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    padding-bottom: 50px;
+}
+
+.menu-category {
+    background-color: #fff; /* White box */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.menu-category h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.menu-item {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    .nav a {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .cta-btn {
+        width: 100%;
+    }
+
+    .menu-section {
+        padding: 0 10px;
+    }
+}

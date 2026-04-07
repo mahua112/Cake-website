@@ -1,0 +1,211 @@
+/* Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo 2', cursive;
+}
+
+body {
+  background: #fff0f5;
+  color: #333;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #f0d6cf;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+}
+
+.nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #6d4c4c;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #ff5fa2;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  gap: 8px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  width: 150px;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.search-box button:hover {
+  transform: scale(1.2);
+}
+
+/* Hero Section */
+.hero {
+  background: url('Bilder/about\ wallpaper.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom-left-radius: 50% 10%;
+  border-bottom-right-radius: 50% 10%;
+  margin-top: 70px; /* for fixed header spacing */
+}
+.hero-overlay {
+  background: rgba(247, 144, 187, 0.7);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+.hero-overlay h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin: 0;
+}
+.hero-overlay p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 10px 0 20px;
+}
+.hero-overlay .tag {
+  display: inline-block;
+  background: #ff3b3b;
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 10%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.about-img img {
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+.about-img img:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
+.about-text {
+  max-width: 500px;
+}
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #ff5fa2;
+  margin-bottom: 20px;
+}
+.about-text p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+.about-text .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ff5fa2;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+.about-text .btn:hover {
+  background: #ff3b7a;
+  transform: scale(1.05);
+}
+
+/* Benefits Section */
+.benefits {
+  padding: 60px 10%;
+  text-align: center;
+}
+.benefits h2 {
+  font-size: 2.5rem;
+  color: #ff5fa2;
+  margin-bottom: 40px;
+}
+.benefit-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.benefit {
+  background: #edb1cb;
+  padding: 30px;
+  border-radius: 20px;
+  width: 250px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.benefit:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.benefit img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+.benefit h3 {
+  color: #ff5fa2;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-img img {
+    width: 80%;
+  }
+  .benefit-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

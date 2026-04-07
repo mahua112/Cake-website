@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SweetBite Patisserie - About</title>
+  <link rel="stylesheet" href="about.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="logo">SweetBite</div>
+    <nav class="nav">
+      <a href="Home.html">Home</a>
+      <a href="Menu.html">Menu</a>
+      <a href="Cake.html">Cakes</a>
+      <a href="order.html">Order</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search cakes, menu...">
+      <button onclick="performSearch()">🔍</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Welcome to SweetBite 🍰</h1>
+      <p>Homemade cakes, cupcakes, macarons, and ice creams made with love!</p>
+      <div class="tag">30% OFF for First 10 Customers!</div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-img">
+      <img src="Bilder/baker.jpg" alt="Cake Chef">
+    </div>
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>SweetBite is a cozy homemade bakery that creates delightful desserts for every occasion. From birthday cakes to wedding masterpieces, cupcakes to macarons, we craft each item with creativity and love.</p>
+      <p>Every dessert is made fresh with natural ingredients, colorful decorations, and a touch of magic to make your celebrations memorable.</p>
+      <a href="#" class="btn">Read More</a>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits">
+    <h2>Why Customers Love Us</h2>
+    <div class="benefit-cards">
+      <div class="benefit">
+        <img src="Bilder/wide .jpg" alt="Variety">
+        <h3>Wide Variety</h3>
+        <p>From cakes to macarons — everything freshly made.</p>
+      </div>
+      <div class="benefit">
+        <img src="Bilder/fast.jpg" alt="Delivery">
+        <h3>Fast Delivery</h3>
+        <p>Orders delivered swiftly, always on time.</p>
+      </div>
+      <div class="benefit">
+        <img src="Bilder/natural.jpg" alt="Ingredients">
+        <h3>Natural Ingredients</h3>
+        <p>Only high-quality, fresh ingredients go into our desserts.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Search functionality
+    function performSearch() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const links = document.querySelectorAll('.nav a');
+      links.forEach(link => {
+        const text = link.textContent.toLowerCase();
+        link.style.display = text.includes(query) ? 'inline-block' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>
